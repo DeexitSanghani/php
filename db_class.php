@@ -126,9 +126,9 @@ class Database
 		}
 		$names = substr($names, 0, strlen($names)-2);
 		$values = substr($values, 0, strlen($values)-2);
-                $query = "INSERT INTO `$table` ($names) VALUES ($values)";
+	    $query = "INSERT INTO `$table` ($names) VALUES ($values)";
 		//print $query."<br>";
-                //die($query);
+	//die($query);
 		return $this->Query($query);
 	}
 	
@@ -206,11 +206,10 @@ class Database
 		$this->Free($res);
 		return $max;
 	}
-	
-        function Free($res)
-        {
-            mysql_free_result($res);
-        }
+	function Free($res)
+    {
+      	mysql_free_result($res);
+    }
 
 	
 	//get Database Name
